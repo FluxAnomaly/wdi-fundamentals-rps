@@ -39,22 +39,34 @@ function setUpRed() {
 // I decided to try a different (simpler) solution for this function.
 function setUpBlack() {
    for (var a=1; a<=8; a+=2) {
-       checkerboard[5][a] = 'B ';
+       checkerboard[5][a] = 'B';
        }
    for (var b=0; b<=7; b+=2) {
-       checkerboard[6][b] = 'B ';
+       checkerboard[6][b] = 'B';
        }
    for (var c=1; c<=8; c+=2) {
-       checkerboard[7][c] = 'B ';
+       checkerboard[7][c] = 'B';
        }
 }
 
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-// Ok this is just plain wrong, I misunderstood the instructions.
-/*var pieces = { 'red' : [[0,0], [0,2], [0,4], [0,6], [1,1], [1,3], [1,5], [1,7], [2,0], [2,2], [2,4], [2,6]],
+var pieces = { 'red' : [[0,0], [0,2], [0,4], [0,6], [1,1], [1,3], [1,5], [1,7], [2,0], [2,2], [2,4], [2,6]],
                 'black' : [[5,1], [5,3], [5,5], [5,7], [6,0], [6,2], [6,4], [6,6], [7,1], [7,3], [7,5], [7,7]]
-             };*/
+             };
 
+/*
+To test your work, run each of the following two operations in the repli.it console
 
+pieces['red'].map(function(piece){
+      var row = piece[0];
+      var col = piece[1];
+      return checkerboard[row][col] === 'R';
+    });
+
+  pieces['black'].map(function(piece){
+      var row = piece[0];
+      var col = piece[1];
+      return checkerboard[row][col] === 'B';
+    });
+*/
